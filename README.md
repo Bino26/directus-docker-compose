@@ -1,2 +1,43 @@
-# directus-docker-compose
-This repository provides a pre-configured docker-compose setup to run Directus with integrated PostGIS (a spatial database extender for PostgreSQL) and Redis for caching and real-time functionality.
+# Directus with PostGIS and Redis (Docker Compose)
+
+This repository provides a pre-configured `docker-compose` setup to run [Directus](https://directus.io/) with integrated [PostGIS](https://postgis.net/) (a spatial database extender for PostgreSQL) and [Redis](https://redis.io/) for caching and real-time functionality.
+
+## 📦 Features
+
+- 🔧 **Directus** – Headless CMS for managing data.
+- 🗺️ **PostGIS** – Adds spatial capabilities to PostgreSQL for GIS support.
+- ⚡ **Redis** – Enhances performance and supports real-time features in Directus.
+
+## 🚀 Quick Start
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Bino26/directus-docker-compose.git
+cd directus-docker-compose
+```
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/Bino26/directus-docker-compose.git
+cd directus-docker-compose
+```
+
+
+### 3. Access Directus
+Visit: [http://localhost:8055](http://localhost:8055)
+Enter those credentials below to  enter to the admin panel and feel free to create your concent !
+
+```bash
+e-mail: admin@example.com
+password:d1r3ctu5
+```
+
+Update your admin user password:
+
+```bash
+npx directus users passwd --email user-email --password new-password
+```
+### 4. Deployment
+Make sure to change sensitive values (KEY, SECRET, ...) and put them in your environment variables file for production !!!
