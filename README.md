@@ -17,17 +17,28 @@ git clone https://github.com/Bino26/directus-docker-compose.git
 cd directus-docker-compose
 ```
 
-### 2. Clone the Repository
+### 2. Build an Run your Directus app 
 
 ```bash
-git clone https://github.com/Bino26/directus-docker-compose.git
-cd directus-docker-compose
+docker compose up -d
+```
+You can shut down with :
+```bash
+docker compose down
 ```
 
+### Import Snapshot at startup
+When the container is started, the data is automatically imported from snapshot.yaml
+
+```bash
+Create snapshot.yaml:
+npx directus schema snapshot ./snapshot.yaml
+```
 
 ### 3. Access Directus
-Visit: [http://localhost:8055](http://localhost:8055)
-Enter those credentials below to  enter to the admin panel and feel free to create your concent !
+Visit: [http://localhost:8055](http://localhost:8055).
+
+Enter those credentials below to  enter in the admin panel and feel free to create your concent !
 
 ```bash
 e-mail: admin@example.com
