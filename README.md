@@ -16,11 +16,16 @@ This repository provides a pre-configured `docker-compose` setup to run [Directu
 git clone https://github.com/Bino26/directus-docker-compose.git
 cd directus-docker-compose
 ```
-
-### 2. Build an Run your Directus app 
+### 2. Configure Environment Variables
 
 ```bash
-docker compose up -d
+cp .env.example .env
+```
+
+### 3. Build an Run your Directus app 
+
+```bash
+docker compose up -build
 ```
 You can shut down with :
 ```bash
@@ -35,7 +40,7 @@ Create snapshot.yaml:
 npx directus schema snapshot ./snapshot.yaml
 ```
 
-### 3. Access Directus
+### 4. Access Directus
 Visit: [http://localhost:8055](http://localhost:8055).
 
 Enter those credentials below to  enter in the admin panel and feel free to create your concent !
@@ -51,4 +56,4 @@ Update your admin user password:
 npx directus users passwd --email user-email --password new-password
 ```
 ### 4. Deployment
-Make sure to change sensitive values (KEY, SECRET, ...) and put them in your environment variables file for production !!!
+🔒 Important: Edit this file to set your own KEY, SECRET,ADMIN_EMAIL,ADMIN_PASSWORD,CORS_ORIGIN and database credentials for production use.
